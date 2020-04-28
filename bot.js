@@ -36,18 +36,8 @@ bot.token = 'Token here';
         run: (args, pars, arr) => {
             bot.discord.user.setActivity(arr.join(' '), { type: "WATCHING" });
             args.delete(1)
-            console.log('someone used the botstatus command!');
+            console.log(args.author.tag, 'used the botstatus command!');
             },
-         },
-         hack: {
-             text: "fun",
-             run: (args, pars, arr) => {
-                args.channel.send("Hacking user.... "),
-                args.channel.send("Users IP is 127.0.0.1 "),
-                args.channel.send("IM COMING... ");
-                args.delete(1)
-                console.log('someone used the fun command!');
-             },
          },
 
          joke: {
@@ -58,7 +48,7 @@ bot.token = 'Token here';
                 args.channel.send("Finding fun jokes... "),
                 args.channel.send(facts[fact]);
                 args.delete(1)
-                console.log('someone used the joke command!');
+                console.log(args.author.tag, 'used the joke command!');
 
             },
         },
@@ -71,7 +61,7 @@ bot.token = 'Token here';
                 args.channel.send("searching for facts... "),
                 args.channel.send(facts[fact]);
                 args.delete(1)
-                console.log('someone used the facts command!');
+                console.log(args.author.tag, 'used the facts command!');
             },
         },
         roulette: {
